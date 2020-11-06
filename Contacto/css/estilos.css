@@ -1,0 +1,89 @@
+@charset "utf-8";
+/* CSS Document */
+.titulo_mapa{
+    text-align: center;
+    font-size: 45px;
+}
+.cont{
+    text-align: left;
+    font-style: normal;
+    line-height: 1.35;
+    font-weight: 700;
+    font-size: 25px;
+}
+.body{
+	background-color: black;
+}
+.datosCont{
+    text-align: right;
+    line-height: 1.35;
+    font-weight: 700;
+    font-size: 25px;
+}
+.cdir{
+    
+    font-size: 25px;
+	LINE-HEIGHT:45px
+}
+.dir{
+    font-size: 16px;
+    line-height: 1.35;
+}
+.container{
+	align-content: center
+}
+.Mapa{
+	align-items: center;
+}
+.nomb{
+	text-align: right
+}
+
+.id{
+	font-size: white;
+}
+.email{
+	font-size: 25px;
+}
+.e{
+	font-size: 16px;
+}
+.tel{
+	font-size: 25px;
+}
+.let{
+	font-size: 50px;
+	text-align: center;
+	color:white;
+	background-color: #797D7F;
+}
+div#nom{
+	float:right;
+	width: 350px;
+	height: 450px;
+
+	color:white;
+	margin-top: 10px;
+	margin-right: 10px;
+	font-size: 22px
+}
+div#contenedor{
+	margin: auto;
+	width: 960px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: #212F3D
+}
+div#general{
+	margin: auto;
+	margin-top: 10px;
+	width: 960px;
+	height: 600px;
+	background-color: #212F3D;
+}
+#app-whatsapp{
+	bottom:95px;
+	display: block;
+}
+
