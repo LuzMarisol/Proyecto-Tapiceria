@@ -1,18 +1,21 @@
 *{
     margin: 0px;
     padding: 0px;
+   
 }
 body{
     background: #444;
     color:white;
 }
 #contenedor{
+
     width: 960px;
     margin: auto;
     margin-top:20px;
     margin-bottom: 20px;
     border-radius: 20px;
     overflow: hidden;
+    background: black;
 }
 header{
     height: 150px;
@@ -34,7 +37,7 @@ nav h2{
     width: 600px;
     height: 500px;
     float: left;
-    background: white;
+    background: black;
     margin-top: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -47,8 +50,7 @@ nav h2{
 #contenido p{
     font-size: 16px;
 	line-height: 1.35;
-    color:black;
-    text-align: left;
+    color:white
 }
 #contenido a{
     color: blue;
@@ -56,10 +58,10 @@ nav h2{
     text-align: left;
     float: left;
 }
-aside{
+aside{ /*Color de las letras*/
     width: 350px;
     height: 500px;
-    background: white;
+    background: black;
     margin-top: 10px;
     float: right;
 }
@@ -67,22 +69,23 @@ aside p{
     font-size: 20px;
     text-align: left;
     line-height: 1;
-    color:black;
+    color: white;
+    margin-top: 10px;
+    margin-left: 20px;
 }
-.caja{
-    color:black;
-    text-align: 2;
-}
+
 footer{
-    background: black;
+    background: white;
     clear: both;
+    text-align: left;
 }
 footer h2{
     font-size: 40px;
-    text-align: center;
+    text-align: left;
     padding: 20px;
     font-style: italic;
 }
+
 .boton{
     color:black;
 }
@@ -110,12 +113,22 @@ footer h2{
 footer{
     background: black;
     clear: both;
+    color:white;
+    margin-top: 2px;
+}
+.dir{
+    font-size: 20px;
+    text-align: inherit;
+    margin-left: 30px;
 }
 footer h2{
     font-size: 40px;
-    text-align: center;
+    text-align: left;
     padding: 20px;
     font-style: italic;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    
 }
 .boton{
     color:black;
@@ -141,6 +154,4 @@ footer h2{
     border-radius: 100%;
     transition: all 300ms;
 }
-
-
 
