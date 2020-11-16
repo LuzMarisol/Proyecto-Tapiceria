@@ -8,19 +8,19 @@ body{
     font-family: 'calibri';
     background:#072446;
     margin: auto;
-    
+
 }
 header {
     /*background:url(/img/Colorcard-hex_071746-www.colorbook.io.png);*/
     /*background: #0a2f58;*/
-    background: url(/Contacto//img/nebulosa-de-colores-de-fondo-papel-pintado-3840x1080-14124_75.jpg);
+    background: url(/Contacto/img/101559.jpg);
     height: 250px;
     background-size: cover;
     background-repeat: no-repeat;
     margin-top: 10px;
     margin-left: 40px;
-    margin-right: 40px;
-   
+    margin-right: 40px;  
+    display: grid;
 }
 
 section{
@@ -32,7 +32,6 @@ section{
 section h1{
     font-size: 40px;
     padding: 5px 0;
-
 }
 /*
 section img{
@@ -47,7 +46,7 @@ section img{
 .conte p{
     font-size: 80px;
     font-weight: bold;
-    margin: 50px 0px;
+    margin: 35px 0px;
 }
 /**Barra de menu: inicio, catalogo, contacto **/
 .conte a{
@@ -60,6 +59,133 @@ section img{
     margin: 20px;
 }
 
+
+/*Relacionado con el Mapa y la caja que lo contiene*/
+#contenido{
+    width: 220px;
+    height: 500px;
+    float:left;
+    background-color: #072446;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+
+iframe{
+    width: 779px;
+    height: 480px;
+    margin-left:10px;
+}
+/*Todolo lo relacionado con el formulario */
+aside{ /*Color de las letras*/
+    width: 430px;
+    height: 570px;
+    margin-right:85px;
+    margin-top: 15px;
+    float: right;
+    color:black;
+    background: #072446;
+}
+
+aside h2{
+    font-size: 36px;
+    color: white;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+
+input[type=text], [type=text]{
+    width: 300px;
+    height: 35px;
+    font: 14px normal normal;
+    margin-top: 10px;
+    margin-left: 40px;
+}
+textarea{
+    width: 300px;
+    height: 110px;
+    font: 14px normal normal;
+    margin-left: 40px;
+    margin-top: 20px
+}
+input[type=submit]{
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: #32A43E;
+    margin-top: 20px;
+    margin-left: 40px;    
+}
+p{
+    text-shadow: 0 1px #fff;
+    font-size: 24px;
+    margin-top: 5px;
+}
+label{
+    margin: 11px 20px 0px 0 0;
+    font-size: 16px;
+    color: #b3aba1;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 0px #fff;
+    margin-top: 20px;
+    margin-left: 40px;
+    
+}
+
+.fecha{
+    width: 300px;
+    height: 30px;
+    font: 14px normal normal;
+    margin-left: 40px;
+    margin: 11px 20px 0px 0 0;
+    font-size: 16px;
+    color: #b3aba1;
+    text-transform: uppercase;
+    text-shadow: 0px 1px 0px #fff;
+
+}
+/*Todo lo relacionado con  la dirección de la pagina web */
+footer{ /**Apatado de la direccón **/
+   position: fixed;
+   bottom:0;
+   height:95px;
+   left: 0;
+   width:100%;
+   background:#072446;
+   margin-left: 40px;
+   margin-right: 40px;
+}
+/** Apartado de dirección, modifica el tamaño de letra del titulo **/
+footer h1{
+    font-size: 30px;
+    text-align: left;
+    margin-left: 1px;
+}
+footer h2{
+    font-size: 30px;
+    text-align: left;
+    margin-left: 5px;
+}
+/*Dirección Calle Lazaro Cárdenas*/
+.dir{
+    font-size: 21px;
+    text-align: left;
+    margin-left: 5px;
+}
+/*Nombres de los Tapiceros como Eduardo, Jesus etc*/
+footer p{
+    font-size: 21px;
+    text-align: left;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+/*Enlaces de los números*/
+footer a{
+    font-size: 21px;
+    color: rgb(42, 162, 231);
+    margin-top: 5px;
+    margin-left: 5px;
+}
 /** Parte de los iconos de WhatsApp**/
 .container-redes{
     position: fixed;
@@ -82,95 +208,80 @@ section img{
 }
 .container-redes{
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 80px;
+    right: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
+/*
 .container-redes a{
     margin-top: 4px;
-}
+}*/
 
-.container-redes img{
+/**.container-redes img{
     width: 60px;
-    padding: 4px;
+    padding: 4px;**/
    /** background: rgba(0,0,0,0.0);**/
-    cursor: pointer;
+   /** cursor: pointer;
     border-radius: 100%;
     transition: all 300ms;
+    */
+/*}**/
+.modalmask {
+    position: fixed;
+    font-family: Arial, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
 }
-#contenido{
-    width: 220px;
-    height: 510px;
-    float:left;
-    background-color: #072446;
-    margin-top: 10px;
-    margin-right: 10px;
+.modalmask:target {
+    opacity:1;
+    pointer-events: auto;
 }
-
-iframe{
-    width: 779px;
-    height: 494px;
-    margin-left:40px;
-    float: left;
+.modalbox{
+    width: 400px;
+    position: relative;
+    padding: 5px 20px 13px 20px;
+    background: #fff;
+    border-radius:3px;
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    transition: all 500ms ease-in;
+     
 }
-aside{ /*Color de las letras*/
-    width: 530px;
-    height: 500px;
-    background:#072446;
-    margin-top: 10px;
-    float: right;
-    color:black;
+.movedown {
+    margin: 0 auto;
 }
-aside p{ 
-    font-size: 20px;
-    text-align: left;
-    line-height: 2;
-    color:white; /** Colores de las letras en el apartado de formulario**/
-    margin-top: 5px;
-    margin-left: 40px;
+.rotate {
+    margin: 10% auto;
+    -webkit-transform: scale(-5,-5);
+    transform: scale(-5,-5);
 }
-/*Caja donde esta el mapa */
-
-
-footer{ /**Apatado de la direccón **/
-    background: #072446;
-    clear: both;
-    color:white;
-    margin-top: 6px;
-    margin-left: 40px;
-    margin-right: 40px;
+.resize {
+    margin: 10% auto;
+    width:0;
+    height:0;
+ 
 }
-/** Apartado de dirección, modifica el tamaño de letra del titulo **/
-footer h1{
-    font-size: 26px;
-    text-align: left;
-    margin-left: 5px;
+.modalmask:target .movedown{       
+    margin:10% auto;
+    color: black;
 }
-footer h2{
-    font-size: 26px;
-    margin-top: 10px;
-    text-align: left;
-    margin-left: 5px;
-
+.modalmask:target .rotate{     
+    transform: rotate(360deg) scale(1,1);
+        -webkit-transform: rotate(360deg) scale(1,1);
 }
-.dir{
-    font-size: 21px;
-    text-align: left;
-    margin-top: 10px;
-    margin-left: 5px;
-}
-footer p{
-    font-size: 21px;
-    text-align: left;
-    margin-top: 10px;
-    margin-left: 5px;
-}
-footer a{
-    font-size: 21px;
-    color: rgb(42, 162, 231);
-    margin-top: 10px;
-    margin-left: 5px;
+ 
+.modalmask:target .resize{
+    width:400px;
+    height:200px;
 }

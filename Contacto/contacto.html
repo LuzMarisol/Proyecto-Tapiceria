@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="/Contacto/css/estilos.css">
     <title>Contacto</title>
-    <link rel="shortcut icon" href="/Contacto/img/logo_size.ico">
+    <link rel="shortcut icon" href="/Contacto/img/Acuario.png">
 </head>
 
 <body>
     <article>
         <header>
             <section>
-                
+
                 <!-- <img src="/Contacto/img/logo_size.jpg"> -->
             </section>
             <div class="conte">
@@ -33,10 +33,10 @@
 
         <a href="https://api.whatsapp.com/send?phone=522289882704" _blank>
 
-            <img src="/img/icon-whatsapp (1).png" title="Eduardo López" alt="" Eduardo López>
+            <img src="/Contacto/img/icon-whatsapp (1).png" title="Eduardo López" alt="" Eduardo López>
             <a href="https://api.whatsapp.com/send?phone=522289882704" _blanck>
 
-                <img src="/img/icon-whatsapp (1).png" title="Jesús Poseros" alt="">
+                <img src="/Contacto/img/icon-whatsapp (1).png" title="Jesús Poseros" alt="">
             </a>
         </a>
     </div>
@@ -50,38 +50,51 @@
             </iframe>
     </section>
     <aside>
-        <form action="mailto:etapiceriaacuario@gmail.com" method="post" name="formal">
-            <p>Nombre:*</p>
-            <p>
-                <input type="text" name="Nombre" style="width: 300px; height: 30px;"></p>
-            <p>Telefono:*</p>
-            <p>
-                <input type="text" name="Nombre" style="width: 300px; height: 30px;"></p>
-            <p>Descripción:*</p>
-            <p>
-                <input type="text" name="Nombre" style="width: 300px; height: 150px;"></p>
+        <h2>Agendar Cita</h2>
+        <form action="formpost.php" method="post">
+            <label for="nombre">Nombre</label>
+            <br>
+            <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" required>
+            <p></p>
+            <label for="text">Telefono</label>
+            <br>
+            <input type="text" name="telefono" id="telefono" placeholder="Telefono" required></p>
+            <p></p>
+            <label name="descripcion">Descripción</label>
+            <br>
+            <textarea name="descripcion"></textarea>
+            <p></p>
+            <label name="fecha">Fecha</label>
+            <br>
+            <input class="fecha" type="date" name="citas" id="fecha" step="1" min="2020-01-01" max="2025-12-31"
+                value="2020-11-120">
+            <p></p>
+            <input class="boton" type="submit" value="Agendar">
+            <!-- <input class="tapicero" type="submit" value="Contactar Tapicero">-->
+
+            <!--VENTANA MODAL-->
+
+            <!--<p>
+                <button name = "button">Agendar</button></p> -->
+            </div>
         </form>
     </aside>
-    <div>
-        <footer>
-            <h1>Dirección</h1>
-            <p class="dir">Calle Lazaro Cárdenas #444, Colonia Pomona, CP: 91049 Xalapa, Veracruz</p>
-            <p></p>
-            <h2>Contacto Tapiceros</h2>
-            <p class="dir"></p>
-            <p>Eduardo Lopez</p>
-            <a href="https://api.whatsapp.com/send?phone=522282548772">Telefono</a>
-            <a href="mailto:etapiceriaacuario@gmail.com">Otro Correo</a>
-            <p>Jesús</p>
-            <a href="https://api.whatsapp.com/send?phone=522281981255">Telefono</a>
-            <a href="mailto:etapiceriaacuario@gmail.com">etapiceriaacuario@gmail.com</a>
-            <p>Pablo</p>
-            <a href="https://api.whatsapp.com/send?phone=522288522126">Telefono</a>
-            <a href="mailto:etapiceriaacuario@gmail.com">Otro Correo</a>
-            <p></p>
-            <p></p>
-        </footer>
-    </div>
+    <footer>
+        <h1>Dirección</h1>
+        <p class="dir">Calle Lazaro Cárdenas #444, Colonia Pomona, CP: 91049 Xalapa, Veracruz</p>
+        <a href="#modal1">Contactar Tapiceros</a>
+        <div id="modal1" class="modalmask">
+            <div class="modalbox movedown">
+                <a href="#close" title="Close" class="close">X</a>
+                <h2>Tapiceros</h2>
+                <p>Eduardo Lopez</p>
+                <a href="https://api.whatsapp.com/send?phone=522282548772">2282548772</a>
+                <p>Jesús</p>
+                <a href="https://api.whatsapp.com/send?phone=522281981255">2281981255</a>
+                <p>Pablo</p>
+                <a href="https://api.whatsapp.com/send?phone=522288522126">2288522126</a>
+            </div>
+    </footer>
 </body>
 
 </html>
