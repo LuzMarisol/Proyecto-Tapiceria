@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -19,10 +19,12 @@
             </section>
             <div class="conte">
                 <p>Contacto</p>
+
                 <a href="/Pagina Principal/index.html">Inicio</a>
                 <a href="/Producto/Producto">Productos</a>
-                <a href="/ventas/index.html">Ventas</a>
+                <!--<a href="/ventas/index.html">Ventas</a>-->
                 <a href="/Contacto/contacto.html">Contacto</a>
+                <a href="">Iniciar sesión</a>
             </div>
         </header>
     </article>
@@ -50,34 +52,59 @@
             </iframe>
     </section>
     <aside>
-        <h2>Agendar Cita</h2>
-        <form action="formpost.php" method="post">
-            <label for="nombre">Nombre</label>
-            <br>
-            <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" required>
-            <p></p>
-            <label for="text">Telefono</label>
-            <br>
-            <input type="text" name="telefono" id="telefono" placeholder="Telefono" required></p>
-            <p></p>
-            <label name="descripcion">Descripción</label>
-            <br>
-            <textarea name="descripcion"></textarea>
-            <p></p>
-            <label name="fecha">Fecha</label>
-            <br>
-            <input class="fecha" type="date" name="citas" id="fecha" step="1" min="2020-01-01" max="2025-12-31"
-                value="2020-11-120">
-            <p></p>
-            <input class="boton" type="submit" value="Agendar">
-            <!-- <input class="tapicero" type="submit" value="Contactar Tapicero">-->
+        <main>
+            <h2>Agendar Cita</h2>
+            <form>
+                <label for="nombre">Nombre</label>
+                <br>
+                <input type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" required>
+                <p></p>
+                <label for="text">Telefono</label>
+                <br>
+                <input type="text" name="telefono" id="telefono" placeholder="Telefono" required></p>
+                <p></p>
+                <label name="descripcion">Descripción</label>
+                <br>
+                <textarea name="descripcion" id="descripcion" placeholder="Descripción del articulo o duda que tenga"
+                    required></textarea>
+                <p></p>
+                <label name="fecha">Fecha</label>
+                <br>
+                <input class="fecha" type="date" name="fecha" id="fecha" step="1" min="2020-01-01" max="2025-12-31"
+                    value="2020-11-120" required>
+                <p></p>
+                <button class="boton" id="btnEnviar">Agendar</button>
+                <!-- <input class="tapicero" type="submit" value="Contactar Tapicero">-->
+                </div>
+                <!-- </form>-->
+        </main>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
 
-            <!--VENTANA MODAL-->
 
-            <!--<p>
-                <button name = "button">Agendar</button></p> -->
-            </div>
-        </form>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+
+        <script>
+            // Your web app's Firebase configuration
+            // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+            var firebaseConfig = {
+                apiKey: "AIzaSyCtJItBB0cj-9b0xPO6KdgoEPOZQwHaIpw",
+                authDomain: "tapiceriaacuario-b469e.firebaseapp.com",
+                databaseURL: "https://tapiceriaacuario-b469e.firebaseio.com",
+                projectId: "tapiceriaacuario-b469e",
+                storageBucket: "tapiceriaacuario-b469e.appspot.com",
+                messagingSenderId: "252601545447",
+                appId: "1:252601545447:web:91f3d7ebc51758f671e842",
+                measurementId: "G-WJ3XVBRTZP"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+        </script>
+        <script src="./opera.js"></script>
     </aside>
     <footer>
         <h1>Dirección</h1>
