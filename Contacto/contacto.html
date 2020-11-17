@@ -11,25 +11,20 @@
 </head>
 
 <body>
-    <article>
-        <header>
-            <section>
+    <!--                BARRA DE NAVEGACIÓN             -->
+    <header>
+        <div class="conte">
+            <p>Contacto</p>
+            <a href="/Pagina Principal/index.html">Inicio</a>
+            <a href="/Producto/Producto">Productos</a>
+            <!--<a href="/ventas/index.html">Ventas</a>-->
+            <a href="/Contacto/contacto.html">Contacto</a>
+            <a href="">Iniciar sesión</a>
+        </div>
+    </header>
 
-                <!-- <img src="/Contacto/img/logo_size.jpg"> -->
-            </section>
-            <div class="conte">
-                <p>Contacto</p>
 
-                <a href="/Pagina Principal/index.html">Inicio</a>
-                <a href="/Producto/Producto">Productos</a>
-                <!--<a href="/ventas/index.html">Ventas</a>-->
-                <a href="/Contacto/contacto.html">Contacto</a>
-                <a href="">Iniciar sesión</a>
-            </div>
-        </header>
-    </article>
-
-    <!--container-redes-sociales-->
+    <!--IMAGEN Y NUMEROS DE LOS CONTACTOS DE WHATSAPP, LAS BURBUJAS FLOTANTES-->
 
     <div class="container-redes">
 
@@ -42,15 +37,16 @@
             </a>
         </a>
     </div>
+
+    <!--     CAJA DONDE SE ENCUENTRA EL MAPA CON LA UBICACIÓN DE LA TAPICERIA    -->
     <section id="contenido">
-        <div id="delimitador">
-            <div class="contenedor">
-                <iframe class="Mapa"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1880.103216797884!2d-96.9075374528414!3d19.5327489540835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db31f6238ff32f%3A0x39cf63c4d2fc873c!2sAcuario!5e0!3m2!1ses!2smx!4v1605156700925!5m2!1ses!2smx"
-                    frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-            </iframe>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1880.103216797884!2d-96.9075374528414!3d19.5327489540835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db31f6238ff32f%3A0x39cf63c4d2fc873c!2sAcuario!5e0!3m2!1ses!2smx!4v1605156700925!5m2!1ses!2smx"
+            frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+        </iframe>
     </section>
+
+    <!--                        FORMULARIO DE CITAS                 -->
     <aside>
         <main>
             <h2>Agendar Cita</h2>
@@ -65,8 +61,7 @@
                 <p></p>
                 <label name="descripcion">Descripción</label>
                 <br>
-                <textarea name="descripcion" id="descripcion" placeholder="Descripción del articulo o duda que tenga"
-                    required></textarea>
+                <textarea name="descripcion" id="descripcion" placeholder="Descripción detallada" required></textarea>
                 <p></p>
                 <label name="fecha">Fecha</label>
                 <br>
@@ -78,13 +73,15 @@
                 </div>
                 <!-- </form>-->
         </main>
+        <!--            Conexión con la base de datos de FIREBASE           -->
+
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
 
 
         <!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
+https://firebase.google.com/docs/web/setup#available-libraries -->
         <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
 
         <script>
@@ -105,7 +102,10 @@
             firebase.analytics();
         </script>
         <script src="./opera.js"></script>
+        <!--                AQUI TERMINA LA PARTE DE LA BASE DE DATOS       7-->
+
     </aside>
+    <!--    PIE DE PAGINA DONDE SE ENCUENTRA LA DIRECCIÓN Y EL CONTACTO CON LOS TAPICEROS-->
     <footer>
         <h1>Dirección</h1>
         <p class="dir">Calle Lazaro Cárdenas #444, Colonia Pomona, CP: 91049 Xalapa, Veracruz</p>
