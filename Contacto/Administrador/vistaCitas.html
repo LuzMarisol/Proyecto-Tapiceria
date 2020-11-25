@@ -1,17 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Agenda</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styl.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+    <title>Agenda de citas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+    <!--<script src="/Contacto/Administrador/tabla.js"></script> -->
+    <link rel="shortcut icon" href="/Contacto/img/Acuario.png">
+
 </head>
 
 <body>
+    <!--                BARRA DE NAVEGACIÓN             -->
+    <header>
+        <div class="conte">
+            <p>Registro de citas</p>
+            <a href="/Pagina Principal/index.html">Inicio</a>
+            <a href=""> Producto</a>
+            <!--<a href="/ventas/index.html">Ventas</a>-->
+            <a href="/Contacto/Administrador/vistaCitas.html">Agenda</a>
+            <a href="">Cerrar sesión</a>
+        </div>
+    </header>
+    <section id="contenido">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Telefono</th>
+                    <th>Descripción</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody id="tabla">
+                
+        </table>
+      
+    </section>
 
 </body>
+<script src="tabla.js"></script>
 
 </html>
