@@ -18,7 +18,7 @@ signupForm.addEventListener('submit', (e) =>{
 
             //Cerrar la ventana
             $('#LoginModal').modal('hide')
-            console.log('Creando usuario...')
+            alert('Creando usuario...')
         })
 })
 
@@ -37,7 +37,7 @@ singinFOrm.addEventListener('submit', (e) => {
 
             //Cerrar la ventana
             $('#LoginModal').modal('hide')
-            console.log('Iniciando sesion...')
+            alert('Iniciando sesion...')
         })
 })
 
