@@ -1,16 +1,81 @@
-    /* Remove the navbar's default rounded borders and increase the bottom margin */ 
-    .navbar {
-        margin-bottom: 50px;
-        border-radius: 0;
-      }
-      
-      /* Remove the jumbotron's default bottom margin */ 
-       .jumbotron {
-        margin-bottom: 0;
-      }
-     
-      /* Add a gray background color and some padding to the footer */
-      footer {
-        background-color: #f2f2f2;
-        padding: 25px;
-      }
+
+/* PARTE GENERAL DE LA PAGINA */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  font-family: 'calibri';
+  margin: auto;
+}
+
+section h1 {
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 850%;
+  color: white;
+  text-shadow: 
+  3px 3px 1px red,
+  5px 5px 2px yellow,
+  8px 8px 3px blue;
+  ;
+}
+
+
+/* ENCABEZADO */
+
+header {
+  background:url(/img/Colorcard-hex_071746-www.colorbook.io.png);
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+  margin-left: 40px;
+  margin-right: 40px;
+  display: grid;
+}
+
+
+body {
+  background: url('/img/sky.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.conte {
+  text-align: center;
+}
+
+/*Parte de los botones inicio, catalogo y contacto*/
+
+.conte p {
+  font-size: 450px;
+  font-weight: bold;
+  margin: 20px 0px;
+}
+
+/*Barra de menu: inicio, catalogo, contacto */
+
+.conte a {
+  color: white;
+  text-decoration: none;
+  background: #172a97;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-size: 20px;
+  margin: 20px;
+}
+
+/*Imagenes del carrusel*/
+.carousel-inner{
+  background-size: 100% 100%;
+  width: 750px;
+  height: auto;
+  padding: 30px 30px;
+  margin-left: 300px;
+}
