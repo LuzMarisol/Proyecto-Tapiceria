@@ -38,20 +38,20 @@ header {
     font-size: 70px;
     font-weight: bold;
     margin: 40px 0px;
+    text-shadow: 3px 3px 1px black, 5px 5px 2px black, 8px 8px 3px black;
 }
 
 /* BARRA DE NAVEGACIÓN */
 
 .conte a {
     font-size: 17px;
-    color:white;
+    color: white;
     text-decoration: none;
     background: #04aed9;
     padding: 8px 20px;
     border-radius: 30px;
     text-align: center;
     margin: 20px;
-   
 }
 
 /*                       FIN DEL ENCABEZADO                     */
@@ -64,7 +64,6 @@ header {
     float: left;
     margin-top: 15px;
     margin-left: 90px;
-    
 }
 
 table {
