@@ -38,6 +38,13 @@ header {
     font-size: 90px;
     font-weight: bold;
     margin: 40px 0px;
+    text-shadow: 
+
+    3px 3px 1px black,
+  
+    5px 5px 2px black,
+  
+    8px 8px 3px black;
 }
 
 /* BARRA DE NAVEGACIÓN */
