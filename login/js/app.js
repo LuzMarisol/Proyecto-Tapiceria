@@ -25,7 +25,7 @@ function ingreso() {
             /*verificar();*/
             console.log("Sesión iniciada");
             alert("Bienvenido");
-            location.href = "/Pagina Principal/index.html";
+            location.href = "/usuarioReg/usuarioR.html";
         })
         .catch(function (error) {
             alert("Realiza tu registro para poder iniciar sesión")
