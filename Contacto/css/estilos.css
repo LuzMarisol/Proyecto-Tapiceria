@@ -38,25 +38,18 @@ header {
     font-size: 90px;
     font-weight: bold;
     margin: 40px 0px;
-    text-shadow: 
-
-    3px 3px 1px black,
-  
-    5px 5px 2px black,
-  
-    8px 8px 3px black;
+    text-shadow: 3px 3px 1px black, 5px 5px 2px black, 8px 8px 3px black;
 }
 
 /* BARRA DE NAVEGACIÓN */
 
-.conte a { 
-     font-size: 16px;
+.conte a {
+    font-size: 16px;
     color: white;
     text-decoration: none;
     background: #04aed9;
     padding: 8px 20px;
     border-radius: 30px;
-  
     margin: 20px;
 }
 
@@ -235,6 +228,7 @@ footer a {
     margin-top: 5px;
     margin-left: 5px;
 }
+
 /* VENTANA MODAL */
 
 .modalmask {
@@ -244,53 +238,58 @@ footer a {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0, 0, 0, 0.8);
     z-index: 99999;
-    opacity:0;
+    opacity: 0;
     -webkit-transition: opacity 400ms ease-in;
     -moz-transition: opacity 400ms ease-in;
     transition: opacity 400ms ease-in;
     pointer-events: none;
 }
+
 .modalmask:target {
-    opacity:1;
+    opacity: 1;
     pointer-events: auto;
 }
-.modalbox{
+
+.modalbox {
     width: 400px;
     position: relative;
     padding: 5px 20px 13px 20px;
     background: #fff;
-    border-radius:3px;
+    border-radius: 3px;
     -webkit-transition: all 500ms ease-in;
     -moz-transition: all 500ms ease-in;
     transition: all 500ms ease-in;
-     
 }
+
 .movedown {
     margin: 0 auto;
 }
+
 .rotate {
     margin: 10% auto;
-    -webkit-transform: scale(-5,-5);
-    transform: scale(-5,-5);
+    -webkit-transform: scale(-5, -5);
+    transform: scale(-5, -5);
 }
+
 .resize {
     margin: 10% auto;
-    width:0;
-    height:0;
- 
+    width: 0;
+    height: 0;
 }
-.modalmask:target .movedown{       
-    margin:10% auto;
+
+.modalmask:target .movedown {
+    margin: 10% auto;
     color: black;
 }
-.modalmask:target .rotate{     
-    transform: rotate(360deg) scale(1,1);
-        -webkit-transform: rotate(360deg) scale(1,1);
+
+.modalmask:target .rotate {
+    transform: rotate(360deg) scale(1, 1);
+    -webkit-transform: rotate(360deg) scale(1, 1);
 }
- 
-.modalmask:target .resize{
-    width:400px;
-    height:200px;
+
+.modalmask:target .resize {
+    width: 400px;
+    height: 200px;
 }

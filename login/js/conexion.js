@@ -5,8 +5,7 @@ function ingreso() {
     firebase.auth().signInWithEmailAndPassword(email2, contrasena2)
         .then(function () {
             /*verificar();*/
-            console.log("Sesión iniciada");
-            alert("Bienvenido");
+           
             location.href = "/Administrador/index.html";
         })
         .catch(function (error) {

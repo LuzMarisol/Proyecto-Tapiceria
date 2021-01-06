@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>Factura Tapiceria</title>
+    <link rel="stylesheet" href="style.css" media="all" />
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
+</head>
+
+<body>
+    <input type="button" value="Imprimir factura" onclick="window.print()">
+    <header class="clearfix">
+        <div id="logo">
+            <img src="logo.png">
+        </div>
+        <h1>TAPICERIA ACUARIO</h1>
+        <div id="company" class="clearfix">
+            <div>Tapiceria Acuario</div>
+            <div>Direccion: Calle Lazaro Cárdenas #444, Colonia Pomona<br /> codigo postal: 91049 Xalapa, Veracruz</div>
+            <div>Numero Telefonico: </div>
+            <div><a href="mailto:company@example.com">etapiceriaacuario@gmail.com</a></div>
+        </div>
+        <div id="project">
+            <div id="asunto"><span>ASUNTO</span> Compra </div>
+            <div id="cliente"><span>CLIENTE</span> --- </div>
+            <div id="direcc"><span>DIRECCION</span> --- </div>
+            <div id="email"><span>EMAIL</span></div>
+        </div>
+    </header>
+    <section id="contenido">
+        <table class="tables">
+            <thead>
+                <tr>
+                    <th>NOMBRE</th>
+                    <th>DESCRIPCION</th>
+                    <th>PRECIO</th>
+                    <th>CANTIDAD</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody id="datos">
+        </table>
+    </section>
+    <div id="notices">
+        <div>LINEA DE CAPTURA:</div>
+        <div class="notice">5439 2424 9587 3000</div>
+    </div>
+    </main>
+    <footer>
+        Esta factura es solo de uso de pagos
+    </footer>
+    <script src="/Factura/js/factura.js"></script>
+    <!-- <img src="/Factura/Presentación1.jpg">-->
+</body>
+
+</html>

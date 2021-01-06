@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: 'calibri';
+    background: #072446;
+    margin: auto;
+}
+
+.modal-body {
+    color: black;
+}
+
+header {
+    background: url(/Administrador/img/barra.jpeg);
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: grid;
+}
+
+.conte {
+    text-align: center;
+}
+
+.conte p {
+    font-size: 70px;
+    font-weight: bold;
+    margin: 40px 0px;
+    text-shadow: 3px 3px 1px black, 5px 5px 2px black, 8px 8px 3px black;
+}
+
+/*Barra de menu: inicio, catalogo, contacto */
+
+.conte a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background: #04aed9;
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin: 10px;
+}
+
+.jumbotron {
+    padding: 1rem 1rem;
+    margin-bottom: 0rem;
+    background-color: #e9ecef;
+    border-radius: .3rem;
+}
+
+table th {
+    background: #4A00E0;
+    color: white;
+    text-align: center;
+}
+
+tbody {
+    color: white;
+    text-align: center;
+}
+.cont a {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    background: #04aed9;
+    padding: 8px 20px;
+    border-radius: 30px;
+    margin: 40px;
+   margin-top: 200px;
+}
+
+.parrafo {
+    text-align: justify;
+    font-size: 18px;
+    margin-left: 120px;
+    margin-top: 20px;
+}

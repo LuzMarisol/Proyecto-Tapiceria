@@ -8,7 +8,7 @@ function registrar() {
             alert("Registrado correctamente, por favor verifique su correo electronico para ingresar");
             location.href = "/login/indexU.html";
         })
-        .catch(function (error) {
+        .catch(function (error ) {
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;
@@ -24,8 +24,13 @@ function ingreso() {
         .then(function () {
             /*verificar();*/
             console.log("Sesión iniciada");
+
+            sessionStorage.setItem('sesion', 'True');
+            var data = sessionStorage.getItem('sesion');
+            console.log("Inicio de sesión: " + data);
+
             alert("Bienvenido");
-            location.href = "/usuarioReg/usuarioR.html";
+            location.href = "/ATD/html/visu_acua.html";
         })
         .catch(function (error) {
             alert("Realiza tu registro para poder iniciar sesión")

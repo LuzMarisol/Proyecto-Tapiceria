@@ -20,7 +20,6 @@ var cita = {};
 var arr = [];
 var agenCitas = "";
 
-
 firebase.database().ref("cita").once('value').then(function (snapshot) {
     var data = snapshot.val();
     for (var k in data) {
@@ -41,38 +40,3 @@ firebase.database().ref("cita").once('value').then(function (snapshot) {
     }
     var table = document.getElementById("tabla").innerHTML = agenCitas;
 });
-
-
-
-//$(document).ready(function () {  
-
-/*referencia.on('value', function (datos) {
-    cita = datos.val();
-    var agenCitas = "";
-    //Recorremos los productos y los mostramos
-    $.each(cita, function (indice, valor) {
-        agenCitas = '<div class="row><div class="col-md-3 cabeceraCitas" >';
-
-        agenCitas += '<h2>' + valor.nombre + '</h2> </div>';
-
-        agenCitas += '<div class="row"><div class="col-md-3 cabeceraCitas">';
-        agenCitas += '<h2>' + valor.telefono + '</h2> </div>';
-        agenCitas += '</div>';
-
-        agenCitas += '<div class="row"><div class="col-md-3 cabeceraCitas">';
-        agenCitas += '<h2>' + valor.telefono + '</h2> </div>';
-        agenCitas += '</div>';
-
-        agenCitas += '<div class="row"><div class="col-md-3 cabeceraCitas">';
-        agenCitas += '<h2>' + valor.descripcion + '</h2> </div>';
-        agenCitas += '</div>';
-
-        agenCitas += '<div class="row"><div class="col-md-3 cabeceraCitas">';
-        agenCitas += '<h2>' + valor.fecha + '</h2> </div>';
-        agenCitas += '</div>';
-    });
-console.log(agenCitas);
-});*/
-
-//});
-

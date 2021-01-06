@@ -6,21 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <link rel="stylesheet" href="/Contacto/css/estilos.css">
-    <title>Contacto</title>
+    <title>ContactoR</title>
     <link rel="shortcut icon" href="/Contacto/img/Acuario.png">
 </head>
 
 <body>
-    <!--                BARRA DE NAVEGACIÓN             -->
+    <!--               BARRA DE NAVEGACIÓN             -->
     <header>
         <div class="conte">
             <p>Contacto</p>
             <a href="/Pagina Principal/index.html">Inicio</a>
-            <a href="/Catalogo/html/catalogo.html">Catálogo</a>
+            <a href="/Catalogo/Proyecto MD/catalogo.html">Catálogo</a>
             <a href="/Contacto/contacto.html">Contacto</a>
-            <a href="/login/html/indexU.html">Iniciar sesión</a>
+            <a href="/ATD/html/visu_acua.html">Articulos</a>
+            <a href="/login/html/indexU.html">Iniciar sesion</a>
         </div>
     </header>
+    <!--IMAGEN Y NUMEROS DE LOS CONTACTOS DE WHATSAPP, LAS BURBUJAS FLOTANTES-->
+
+    <div class="container-redes" id="whatsApp">
+        <a href="https://api.whatsapp.com/send?phone=522289882704" _blank>
+            <img src="/Contacto/img/icon-whatsapp (1).png" title="Eduardo López" alt="">
+            <a class="imag" href="https://api.whatsapp.com/send?phone=522289882704" _blanck>
+                <img src="/Contacto/img/icon-whatsapp (1).png" title="Jesús Poseros" alt="">
+            </a>
+        </a>
+    </div>
+
     <!--     CAJA DONDE SE ENCUENTRA EL MAPA CON LA UBICACIÓN DE LA TAPICERIA    -->
     <section id="contenido">
         <iframe
@@ -48,8 +60,8 @@
                 <p></p>
                 <label name="fecha">Fecha</label>
                 <br>
-                <input class="fecha" type="date" name="fecha" id="fecha" step="1" min="2020-01-01" max="2025-12-31"
-                    value="2020-11-120" required>
+                <input class="fecha" type="date" name="fecha" id="fecha" step="1" min="01-01-2020" max="31-12-2025"
+                    value="12-11-2020" required>
                 <p></p>
                 <button class="boton" id="btnEnviar">Agendar</button>
                 <!-- <input class="tapicero" type="submit" value="Contactar Tapicero">-->
@@ -85,7 +97,7 @@
             firebase.initializeApp(firebaseConfig);
             firebase.analytics();
         </script>
-        <script src="./opera.js"></script>
+        <script src="/Contacto/opera.js"></script>
         <!--                AQUI TERMINA LA PARTE DE LA BASE DE DATOS       7-->
     </aside>
 
@@ -93,7 +105,7 @@
     <footer>
         <h1>Dirección</h1>
         <p class="dir">Calle Lazaro Cárdenas #444, Colonia Pomona, CP: 91049 Xalapa, Veracruz</p>
-         <a href="#modal1">Contactar Tapiceros</a>
+        <a href="#modal1">Contactar Tapiceros</a>
         <div id="modal1" class="modalmask">
             <div class="modalbox movedown">
                 <a href="#close" title="Close" class="close">X</a>

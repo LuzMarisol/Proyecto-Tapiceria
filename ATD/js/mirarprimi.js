@@ -7,6 +7,23 @@ $(document).ready(function () {
     };
     firebase.initializeApp(config); //inicializamos firebase
 
+    window.onload = function () {
+        //Guardar los datos del formulario en la base de datos
+        var dataBD = firebase.database().ref('productos').push();
+        dataBD.set({
+            clave: dataBD.getKey(),
+            carrito: ""
+        })
+        sessionStorage.setItem('clavecarrito', dataBD.getKey());
+        var data = sessionStorage.getItem('clavecarrito');
+        console.log("clave de carrito" + data);
+
+        if (sessionStorage.getItem('sesion') != 'True') {
+            alert("Para realizar una compra, por favor inicie sesión o realize su registro")
+            document.getElementById("datos").style.display = "none";
+        }
+
+    }
     var filaEliminada; //para capturara la fila eliminada
     var filaEditada; //para capturara la fila editada o actualizada
 
@@ -56,86 +73,18 @@ $(document).ready(function () {
     });
 
     coleccionProductos.on("child_added", datos => {
-        dataSet = [datos.key, datos.child("nombre").val(), datos.child("descripcion").val(), datos.child("cantidad").val(), datos.child("precio").val()];
+        var aux = '<input style="width:50px; margin-right:5px" min="1" value="1" onkeypress="return (event.charCode >= 49 && event.charCode <= 57)" type="number" id="' + datos.child("clave").val() + '"><button type="button" class="btn btn-primary btn-xs" onclick="agregar(\'' + datos.child("clave").val() + '\')">Agregar</button>';
+        dataSet = [datos.key, datos.child("nombre").val(), datos.child("descripcion").val(), datos.child("cantidad").val(), datos.child("precio").val(), aux];
         table.rows.add([dataSet]).draw();
     });
-    coleccionProductos.on('child_changed', datos => {
-        dataSet = [datos.key, datos.child("nombre").val(), datos.child("descripcion").val(), datos.child("cantidad").val(), datos.child("precio").val()];
-        table.row(filaEditada).data(dataSet).draw();
-    });
-    coleccionProductos.on("child_removed", function () {
-        table.row(filaEliminada.parents('tr')).remove().draw();
-    });
-
-    $('form').submit(function (e) {
-        e.preventDefault();
-        /* let clave = $.trim($('#clave').getKey());*/
-        let id = $.trim($('#id').val());
-        let nombre = $.trim($('#Nombre').val());
-        let descripcion = $.trim($('#descripcion').val());
-        let cantidad = $.trim($('#cantidad').val());
-        let precio = $.trim($('#precio').val());
-        let idFirebase = id;
-        var productos = coleccionProductos.push();
-        if (idFirebase == '') {
-            idFirebase = productos.key;
-        };
-        //agregamos la extracción de la
-        data = { clave: productos.getKey(), nombre: nombre, descripcion: descripcion, cantidad: cantidad, precio: precio };
-        actualizacionData = {};
-        actualizacionData[`/${idFirebase}`] = data;
-        coleccionProductos.update(actualizacionData);
-        id = '';
-        $("form").trigger("reset");
-        $('#modalAltaEdicion').modal('hide');
-    });
-
-    //Botones
-    $('#btnNuevo').click(function () {
-        $('#id').val('');
-        $('#Nombre').val('');
-        $('#descripcion').val('');
-        $('#cantidad').val('');
-        $('#precio').val('');
-        $("form").trigger("reset");
-        $('#modalAltaEdicion').modal('show');
-    });
-
-    $("#tablaProductos").on("click", ".btnEditar", function () {
-        filaEditada = table.row($(this).parents('tr'));
-        let fila = $('#tablaProductos').dataTable().fnGetData($(this).closest('tr'));
-        let id = fila[0];
-        console.log(id);
-        let nombre = $(this).closest('tr').find('td:eq(0)').text();
-        let descripcion = $(this).closest('tr').find('td:eq(1)').text();
-        let cantidad = parseInt($(this).closest('tr').find('td:eq(2)').text());
-        let precio = parseInt($(this).closest('tr').find('td:eq(3)').text());
-        $('#id').val(id);
-        $('#Nombre').val(nombre);
-        $('#descripcion').val(descripcion);
-        $('#cantidad').val(cantidad);
-        $('#precio').val(precio);
-        $('#modalAltaEdicion').modal('show');
-    });
-    //para eliminar
-    $("#tablaProductos").on("click", ".btnBorrar", function () {
-        filaEliminada = $(this);
-        Swal.fire({
-            title: '¿Está seguro de eliminar el producto?',
-            text: "¡Está operación no se puede revertir!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#d33',
-            cancelButtonColor: '#3085d6',
-            confirmButtonText: 'Borrar'
-        }).then((result) => {
-            if (result.value) {
-                let fila = $('#tablaProductos').dataTable().fnGetData($(this).closest('tr'));
-                let id = fila[0];
-                db.ref(`Producto/${id}`).remove()
-                Swal.fire('¡Eliminado!', 'El producto ha sido eliminado.', 'success')
-            }
-        })
-    });
-
 });
+
+function agregar(clave) {
+    var cantidad = document.getElementById(clave).value;
+    var clavecarrito = sessionStorage.getItem('clavecarrito');
+    var dataBD = firebase.database().ref('productos');
+
+    dataBD.child(clavecarrito).child("carrito").push({
+        clave: clave, cantidad: cantidad
+    });
+}
