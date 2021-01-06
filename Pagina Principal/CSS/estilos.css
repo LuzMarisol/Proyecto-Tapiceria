@@ -52,8 +52,8 @@
   
   /*Parte de los botones inicio, catalogo y contacto*/
   
-  .conte p {
-    font-size: 450px;
+section h1 {
+    font-size: 120px;
     font-weight: bold;
     margin: 20px 0px;
   }

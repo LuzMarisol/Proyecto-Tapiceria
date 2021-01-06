@@ -22,7 +22,11 @@ $(document).ready(function () {
             alert("Para realizar una compra, por favor inicie sesión o realize su registro")
             document.getElementById("datos").style.display = "none";
         }
-
+        var sesion1 = sessionStorage.getItem('sesion');
+        if(sesion1 =='True'){
+            document.getElementById("log").style.display = "none";
+            document.getElementById("cerrar").style.display="inline-block";
+        }
     }
     var filaEliminada; //para capturara la fila eliminada
     var filaEditada; //para capturara la fila editada o actualizada
@@ -87,4 +91,8 @@ function agregar(clave) {
     dataBD.child(clavecarrito).child("carrito").push({
         clave: clave, cantidad: cantidad
     });
+}
+function cerrarSesion(){
+    sessionStorage.setItem("sesion", "False");
+    alert("Cerrando sesión")
 }
