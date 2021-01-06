@@ -6,7 +6,7 @@ function registrar() {
         .then(function () {
             verificar();
             alert("Registrado correctamente, por favor verifique su correo electronico para ingresar");
-            location.href = "/login/indexU.html";
+            location.href = "/login/html/indexU.html";
         })
         .catch(function (error ) {
             // Handle Errors here.
