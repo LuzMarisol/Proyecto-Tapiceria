@@ -5,7 +5,7 @@ function registrar() {
     firebase.auth().createUserWithEmailAndPassword(email, contrasena)
         .then(function () {
             verificar();
-            alert("Registrado correctamente, por favor verifique su correo electronico para ingresar");
+            alert("Registrado correctamente");
             location.href = "/login/html/indexU.html";
         })
         .catch(function (error ) {
